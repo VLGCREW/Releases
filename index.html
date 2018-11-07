@@ -4,7 +4,9 @@
 	
 	// RELEASE INFO
 		var releaseNumber = "20181113";
-		var iop = "59992";
+		var iopGeneral = "59992";
+		var iopEquipo = "59331";
+		var app = "Vueling.Crew";
 		
 	// INT
 		var INTScripts = "Done";
@@ -205,9 +207,9 @@
 	.center {margin: 0 auto;}
 	.na {background:#e9e9e9;}
 	.bigger {max-width:100%;margin-right:3rem;}
-	#iop{font-size: 1.5rem;}
-	.release {background:#ffb300;}
-	.release h1{font-size:1.5rem;}
+	#iop{font-size: 1.25rem !important;color: #c1c1c1;}
+	.release {background:#ffb300;text-align:center;}
+	.release h1{font-size:1.5rem; color: #585858;}
 </style>
 <script>
 	$(document).ready(function() {
@@ -215,7 +217,7 @@
 		varArr.forEach(function(element) {
 		  $("#" + element).removeClass().addClass("center " + window[element].replace(" ","").toLowerCase()).text(window[element].toUpperCase());
 		});
-		$("#releaseNumber").text("RELEASE " + releaseNumber);
-		$("#iop").text("IOP " + releaseNumber);
+		$("#releaseNumber").html("RELEASE " + releaseNumber + "<br><font size='3rem'>" + app + "</font>");
+		$("#iop").html((iopGeneral != "" ? ("IOP General " + iopGeneral + "<br>") : "") + (iopEquipo != "" ? ("IOP Equipo " + iopEquipo + "<br>") : ""));
     });
 </script>
