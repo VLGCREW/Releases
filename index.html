@@ -1,0 +1,146 @@
+<style>
+	.header {background:#ffcc00;flex-grow:1;display:flex;align-items:center;color:#fafafa;text-transform:uppercase;;max-width:16.6%;}
+	.environment {flex-grow:1;display:flex;align-items:center;border-bottom:1px dashed #c1c1c1;border-right:1px dashed #c1c1c1;max-width:16.6%;}
+	.environment h1, .bigger h1{color:#585858;}
+	.column {flex-grow:1;display:flex;flex-direction:row;margin-right:0.1rem;}
+	.item {flex-grow:1;display:flex;align-items:center;border-bottom:1px dashed #c1c1c1;max-width:16.6%;}
+	.special {display:flex;align-items:center;border-bottom:1px dashed #c1c1c1;max-width:16.6%;}
+	.empty {border-right:none;}
+	.last {border-bottom:none;}
+	.center {margin: 0 auto;}
+	.pending {color:#c1c1c1;}
+	.progress { color: #fc0; }
+	.done { color: rgb(76, 175, 80);}
+	.na {background:#e9e9e9;}
+	.bigger {max-width:100%;margin-right:3rem;}
+</style>
+<div style="display:flex; width:100%;height:100%;font-family:Arial, Helvetica, sans-serif;flex-direction:column;">
+	<div id="row1" class="column">
+		<div class="header">
+			<h1 class="center">Environment</h1>
+		</div>
+		<div class="header">
+			<h1 class="center">Scripts</h1>
+		</div>
+		<div class="header">
+			<h1 style="margin:0 auto;">Config</h1>
+		</div>
+		<div class="header">
+			<h1 style="margin:0 auto;">Deploy</h1>
+		</div>
+		<div class="header">
+			<h1 style="margin:0 auto;">Validations</h1>
+		</div>
+		<div class="header">
+			<h1 style="margin:0 auto;">Regressive</h1>
+		</div>
+	</div>
+	<div id="row2" class="column">
+		<div class="environment">
+			<h1 class="center">INT</h1>
+		</div>
+		<div class="item">
+			<h1 class="center progress">IN PROGRESS</h1>
+		</div>
+		<div class="item">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+		<div class="item">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+		<div class="item">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+		<div class="item">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+	</div>
+	<div id="row3" class="column">
+		<div class="environment">
+			<h1 class="center">QA05</h1>
+		</div>
+		<div class="item">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+		<div class="item na">
+			<h1 class="center">&nbsp;</h1>
+		</div>
+		<div class="item na">
+			<h1 class="center">&nbsp;</h1>
+		</div>
+		<div class="item na">
+			<h1 class="center">&nbsp;</h1>
+		</div>
+		<div class="item na">
+			<h1 class="center">&nbsp;</h1>
+		</div>
+	</div>
+	<div id="row4" class="column">
+		<div class="environment">
+			<h1 class="center">PRE</h1>
+		</div>
+		<div class="item">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+		<div class="item">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+		<div class="item">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+		<div class="item">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+		<div class="item">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+	</div>
+	<div id="row5" class="column" style="justify-content: center;border-bottom:1px dashed #c1c1c1;">
+		<div class="special last bigger">
+			<h1 class="center pending">VERIFICAR TABLAS SQL [INT vs PRO]</h1>
+		</div>
+		<div class="special last">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+	</div>
+	<div id="row6" class="column">
+		<div class="environment">
+			<h1 class="center">PRO A</h1>
+		</div>
+		<div class="item">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+		<div class="item">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+		<div class="item">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+		<div class="item">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+		<div class="item">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+	</div>
+	<div id="row7" class="column">
+		<div class="environment">
+			<h1 class="center">PRO B</h1>
+		</div>
+		<div class="item last na">
+			<h1 class="center">&nbsp;</h1>
+		</div>
+		<div class="item last na">
+			<h1 class="center">&nbsp;</h1>
+		</div>
+		<div class="item last">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+		<div class="item last">
+			<h1 class="center pending">PENDING</h1>
+		</div>
+		<div class="item last na">
+			<h1 class="center">&nbsp;</h1>
+		</div>
+	</div>
+</div>
