@@ -183,13 +183,10 @@
 		<div class="item">
 			<h1 class="center">&nbsp;</h1>
 		</div>
-		<div class="item">
-			<h1 class="center">&nbsp;</h1>
-		</div>
 		<div class="item last">
 			<h1 id="iop" class="center"></h1>
 		</div>
-		<div class="item last release">
+		<div class="item last release" style="max-width:100%">
 			<h1 id="releaseNumber" class="center"></h1>
 		</div>
 	</div>
@@ -209,7 +206,7 @@
 	.bigger {max-width:100%;margin-right:3rem;}
 	#iop{font-size: 1.75rem !important;color: #c1c1c1;}
 	.release {background:#ffb300;text-align:center;}
-	.release h1{font-size:1.75rem; color: #585858;}
+	.release h1{font-size:2rem; color: #585858;}
 </style>
 <script>
 	$(document).ready(function() {
@@ -217,7 +214,7 @@
 		varArr.forEach(function(element) {
 		  $("#" + element).removeClass().addClass("center " + window[element].replace(" ","").toLowerCase()).text(window[element].toUpperCase());
 		});
-		$("#releaseNumber").html("RELEASE " + releaseNumber + "<br><font size='3rem'>" + app + "</font>");
+		$("#releaseNumber").html("RELEASE " + releaseNumber + "<br><font size='5rem'>" + app + "</font>");
 		$("#iop").html((iopGeneral != "" ? ("IOP General " + iopGeneral + "<br>") : "") + (iopEquipo != "" ? ("IOP Equipo " + iopEquipo + "<br>") : ""));
     });
 </script>
