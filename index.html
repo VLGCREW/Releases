@@ -1,4 +1,5 @@
 <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
 <script>
 	// Valid Status values: [ pending | in progress | done | fixing ]. For adding new status you should add a new CSS class.
 	var inprogress = "in progress";
@@ -8,7 +9,7 @@
 </script>
 <script>
 	// RELEASE INFO
-		var releaseNumber = "20181113";
+		var releaseDate = new Date(2018, 11, 13);
 		var iopGeneral = "59992";
 		var iopEquipo = "59331";
 		var app = "Vueling.Crew";
@@ -77,6 +78,7 @@
 		<div id="row2" class="column">
 			<div class="environment">
 				<h1 class="center">INT</h1>
+				<h2 id="releaseDateINT" class="center"></h2>
 			</div>
 			<div class="item">
 				<h1 id="INTScripts"></h1>
@@ -119,6 +121,7 @@
 		<div id="row4" class="column">
 			<div class="environment">
 				<h1 class="center">PRE</h1>
+				<h2 id="releaseDatePRE" class="center"></h2>
 			</div>
 			<div class="item">
 				<h1 id="PREScripts"></h1>
@@ -198,7 +201,7 @@
 				<h1 id="iop" class="center"></h1>
 			</div>
 			<div class="item last release" style="max-width:100%">
-				<h1 id="releaseNumber" class="center"></h1>
+				<h1 id="releaseDate" class="center"></h1>
 			</div>
 		</div>
 	</div>
@@ -221,12 +224,33 @@
 	.release h1{font-size:2rem; color: #585858;}
 </style>
 <script>
+	function convertDate(inputFormat) {
+	
+	  function pad(s) { return (s < 10) ? '0' + s : s; }
+	  var d = new Date(inputFormat);
+	  return [pad(d.getDate()), pad(d.getMonth()), d.getFullYear()].join('/');
+	}
+	
+	function addDays(date, days) {
+	  var result = new Date(date);
+	  result.setDate(result.getDate() + days);
+	  return result;
+	}
+	
 	$(document).ready(function() {
 		var varArr = ["INTScripts", "INTConfig", "INTDeploy", "INTValidations", "INTRegressive", "QA05Scripts", "QA05Config", "QA05Validations", "PREScripts", "PREConfig", "PREDeploy", "PREValidations", "PRERegressive", "tablesINTPRO", "PROAScripts", "PROAConfig", "PROADeploy", "PROAValidations", "PROBDeploy", "PROBValidations"];
 		varArr.forEach(function(element) {
 		  $("#" + element).removeClass().addClass("center " + window[element].replace(" ","").toLowerCase()).text(window[element].toUpperCase());
 		});
-		$("#releaseNumber").html("RELEASE " + releaseNumber + "<br><font size='5rem'>" + app + "</font>");
+		
+		$("#releaseDateINT").html("<br>" + convertDate(addDays(releaseDate,-6)));
+		$("#releaseDatePRE").html("<br>" + convertDate(addDays(releaseDate,-2)));
+		$("#releaseDate").html("RELEASE " + convertDate(releaseDate) + "<br><font size='5rem'>" + app + "</font>");
 		$("#iop").html((iopGeneral != "" ? ("IOP General " + iopGeneral + "<br>") : "") + (iopEquipo != "" ? ("IOP Equipo " + iopEquipo + "<br>") : ""));
     });
+	
+</script>
+
+<script>
+
 </script>
