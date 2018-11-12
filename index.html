@@ -30,8 +30,7 @@
 		var PREScripts = done;
 		var PREConfig = done;
 		var PREDeploy = done;
-		var PREValidations = pending;
-		var PRERegressive = pending;
+		var PREValidations = inprogress;
 		
 	// TABLE VERIFICATION
 		var tablesINTPRO = pending;
@@ -134,8 +133,8 @@
 			<div class="item">
 				<h1 id="PREValidations"></h1>
 			</div>
-			<div class="item">
-				<h1 id="PRERegressive"></h1>
+			<div class="item na">
+				<h1 class="center">&nbsp;</h1>
 			</div>
 		</div>
 		<div id="row5" class="column" style="justify-content: center;border-bottom:1px dashed #c1c1c1;">
@@ -238,7 +237,7 @@
 	}
 	
 	$(document).ready(function() {
-		var varArr = ["INTScripts", "INTConfig", "INTDeploy", "INTValidations", "INTRegressive", "QA05Scripts", "QA05Config", "QA05Validations", "PREScripts", "PREConfig", "PREDeploy", "PREValidations", "PRERegressive", "tablesINTPRO", "PROAScripts", "PROAConfig", "PROADeploy", "PROAValidations", "PROBDeploy", "PROBValidations"];
+		var varArr = ["INTScripts", "INTConfig", "INTDeploy", "INTValidations", "INTRegressive", "QA05Scripts", "QA05Config", "QA05Validations", "PREScripts", "PREConfig", "PREDeploy", "PREValidations", "tablesINTPRO", "PROAScripts", "PROAConfig", "PROADeploy", "PROAValidations", "PROBDeploy", "PROBValidations"];
 		varArr.forEach(function(element) {
 		  $("#" + element).removeClass().addClass("center " + window[element].replace(" ","").toLowerCase()).text(window[element].toUpperCase());
 		});
