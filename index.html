@@ -34,7 +34,7 @@
 		var PRERegressive = done;
 		
 	// TABLE VERIFICATION
-		var tablesINTPRO = inprogress;
+		var tablesPREVerification = inprogress;
 		
 	// PRO A
 		var PROAScripts = pending;
@@ -146,7 +146,7 @@
 				<h1 class="center pending">VERIFICAR TABLAS SQL [INT vs PRE]</h1>
 			</div>
 			<div class="special last">
-				<h1 id="tablesINTPRO"></h1>
+				<h1 id="tablesPREVerification"></h1>
 			</div>
 		</div>
 		<div id="row6" class="column">
@@ -248,7 +248,7 @@
 					"PREScripts", "PREConfig", "PREDeploy", "PREValidations", "PRERegressive", 
 					"PROAScripts", "PROAConfig", "PROADeploy", "PROAValidations","PROARegressive", 
 					"PROBDeploy", "PROBValidations", "PROBRegressive",
-					"tablesINTPRO"];
+					"tablesPREVerification"];
 		varArr.forEach(function(element) {
 		  $("#" + element).removeClass().addClass("center " + window[element].replace(" ","").toLowerCase()).text(window[element].toUpperCase());
 		});
