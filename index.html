@@ -12,7 +12,7 @@
 	// RELEASE INFO
 		var releaseDate = new Date(2018, 11, 13);
 		var iopGeneral = "59992";
-		var iopEquipo = "59331";
+		var iopTeam = "59331";
 		var app = "Vueling.Crew";
 		
 	// INT
@@ -147,7 +147,7 @@
 		</div>
 		<div id="row5" class="column" style="justify-content: center;border-bottom:1px dashed #c1c1c1;">
 			<div class="special last bigger">
-				<h1 class="center pending">VERIFICAR TABLAS SQL [INT vs PRE]</h1>
+				<h1 class="center pending">Verify SQL tables [INT vs PRE]</h1>
 			</div>
 			<div class="special last">
 				<h1 id="tablesPREVerification"></h1>
@@ -299,7 +299,7 @@
 		$("#releaseDateA").html("<br>" + convertDate(releaseDate));
 		$("#releaseDateB").html("<br>" + convertDate(releaseDate));
 		$("#releaseDate").html("RELEASE " + convertDate(releaseDate) + "<br><font size='5rem'>" + app + "</font>");
-		$("#iop").html((iopGeneral != "" ? ("IOP General " + iopGeneral + "<br>") : "") + (iopEquipo != "" ? ("IOP Equipo " + iopEquipo + "<br>") : ""));
+		$("#iop").html((iopGeneral != "" ? ("IOP General " + iopGeneral + "<br>") : "") + (iopTeam != "" ? ("IOP team " + iopEquipo + "<br>") : ""));
 		
 		if (isReleaseFinishied)
 		{
