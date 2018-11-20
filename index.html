@@ -50,7 +50,7 @@
 		var PROBRegressive = pending;
 
 	// Release END
-		var isReleaseFinishied = true;
+		var isReleaseFinishied = false;
 	
 </script>
 <style>
@@ -294,7 +294,7 @@
 		  $("#" + element).removeClass().addClass("center " + window[element].replace(" ","").toLowerCase()).text(window[element].toUpperCase());
 		});
 		
-		$("#releaseDateINT").html("<br>" + convertDate(addDays(releaseDate,-6)));
+		$("#releaseDateINT").html("<br>" + convertDate(addDays(releaseDate,-7)));
 		$("#releaseDatePRE").html("<br>" + convertDate(addDays(releaseDate,-2)));
 		$("#releaseDateA").html("<br>" + convertDate(releaseDate));
 		$("#releaseDateB").html("<br>" + convertDate(releaseDate));
