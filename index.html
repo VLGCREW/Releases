@@ -49,7 +49,6 @@
 		var PROBDeploy = pending;
 		var PROBValidations = pending;
 		var PROBRegressive = pending;
-
 	// Release END
 		var isReleaseFinishied = false;
 	
@@ -86,7 +85,7 @@
 		<div id="row2" class="column">
 			<div class="environment">
 				<h1 class="center">INT</h1>
-				<h2 id="releaseDateINT" class="center"></h2>
+                <h2 id="releaseDateINT" class="center"></h2>
 			</div>
 			<div class="item">
 				<h1 id="INTScripts"></h1>
@@ -129,7 +128,7 @@
 		<div id="row4" class="column">
 			<div class="environment">
 				<h1 class="center">PRE</h1>
-				<h2 id="releaseDatePRE" class="center"></h2>
+                <h2 id="releaseDatePRE" class="center"></h2>
 			</div>
 			<div class="item">
 				<h1 id="PREScripts"></h1>
@@ -198,11 +197,15 @@
 			</div>
 		</div>
 		<div id="row8" class="column">
-			<div class="item last">
-				<h1 class="center">&nbsp;</h1>
+			<div class="environment last">
+                <h2 class="center">develop (CI)</h2>
+                <br/>
+				<h1 class="center"><img src="https://vueling.visualstudio.com/Legacy/_apis/build/status/Vueling.CREW/Vueling.CREW%20(develop)(CI)"/></h1>
 			</div>
-			<div class="item last">
-				<h1 class="center">&nbsp;</h1>
+			<div class="environment last">
+                <h2 class="center">master (CI)</h2>
+                <br/>
+				<h1 class="center"><img src="https://vueling.visualstudio.com/Legacy/_apis/build/status/Vueling.CREW/Vueling.CREW%20(CI)"/></h1>
 			</div>
 			<div class="item releseEnded last">
 				<label class="label">
