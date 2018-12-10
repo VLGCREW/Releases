@@ -11,9 +11,9 @@
 </script>
 <script>
 	// RELEASE INFO
-		var releaseDate = new Date(2018, 12, 18);
+		var releaseDate =  new Date("2018-12-18")
 		var iopGeneral = "---";
-		var iopTeam = "";
+		var iopTeam = "60960";
 		var app = "Vueling.Crew";
 		
 	// INT
@@ -276,14 +276,16 @@
 </style>
 <script>
 	function convertDate(inputFormat) {
-	
+	  
 	  function pad(s) { return (s < 10) ? '0' + s : s; }
-	  var d = new Date(inputFormat);
-	  return [pad(d.getDate()), pad(d.getMonth()), d.getFullYear()].join('/');
+	  
+	  var d = inputFormat;
+	  return [pad(d.getDate()), pad(d.getMonth()+1), d.getFullYear()].join('/');
 	}
 	
 	function addDays(date, days) {
-	  var result = new Date(date);
+	  
+	  var result = date;
 	  result.setDate(result.getDate() + days);
 	  return result;
 	}
@@ -291,7 +293,6 @@
 	function getStatusText(element){
 		return element.toUpperCase();
 	}
-	
 	
 	function getStatusClass(element){
 		if (element=='-') return 'none';
