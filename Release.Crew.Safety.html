@@ -224,9 +224,9 @@
 </body>
 <style>
 	body {background:#f2f2f2;}
-	.header {background:#1976d2;flex-grow:1;display:flex;align-items:center;color:white;text-transform:uppercase;;max-width:16.6%;margin-right:1px;cursor:default;}
+	.header {background:#1976d2;flex-grow:1;display:flex;align-items:center;color:#1a237e;text-transform:uppercase;;max-width:16.6%;margin-right:1px;cursor:default;}
 	.environment {flex-grow:1;display:flex;flex-direction:column;align-items:center;border-bottom:1px dashed #b1b1b1;border-right:1px dashed #b1b1b1;max-width:16.6%;cursor:default;justify-content:center;}
-	.environment h1, .bigger h1{color:#white;}
+	.environment h1, .bigger h1{color:#1a237e;}
 	.environment h2 {color:#989898;font-size:1.5rem;margin-top:-1rem;}
 	.column {flex-grow:1;display:flex;flex-direction:row;margin-right:0.1rem;cursor:default;}
 	.item {flex-grow:1;display:flex;align-items:center;border-bottom:1px dashed #b1b1b1;max-width:16.6%;cursor:default;}
@@ -307,8 +307,8 @@
 		  $("#" + element).removeClass().addClass("center " + getStatusClass(window[element])).text(getStatusText(window[element]));
 		});
 		
-		$("#releaseDateINT").html("<br>" + convertDate(addDays(releaseDate,-7)));
-		$("#releaseDatePRE").html("<br>" + convertDate(addDays(releaseDate,-2)));
+		$("#releaseDateINT").html("<br>" + convertDate(addDays(new Date(releaseDate.getTime()),-7)));
+		$("#releaseDatePRE").html("<br>" + convertDate(addDays(new Date(releaseDate.getTime()),-2)));
 		$("#releaseDateA").html("<br>" + convertDate(releaseDate));
 		$("#releaseDateB").html("<br>" + convertDate(releaseDate));
 		$("#releaseDate").html("RELEASE " + convertDate(releaseDate) + "<br><font size='5rem'>" + app + "</font>");
