@@ -313,7 +313,7 @@
 		  $("#" + element).removeClass().addClass("center " + getStatusClass(window[element])).text(getStatusText(window[element]));
 		});
 		
-		$("#releaseDateINT").html("<br>" + convertDate(addDays(releaseDate,-7)));
+		$("#releaseDateINT").html("<br>" + convertDate(addDays(new Date(releaseDate.getTime()),-7)));
 		$("#releaseDatePRE").html("<br>" + convertDate(addDays(releaseDate,-2)));
 		$("#releaseDateA").html("<br>" + convertDate(releaseDate));
 		$("#releaseDateB").html("<br>" + convertDate(releaseDate));
