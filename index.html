@@ -314,7 +314,7 @@
 		});
 		
 		$("#releaseDateINT").html("<br>" + convertDate(addDays(new Date(releaseDate.getTime()),-7)));
-		$("#releaseDatePRE").html("<br>" + convertDate(addDays(releaseDate,-2)));
+		$("#releaseDatePRE").html("<br>" + convertDate(addDays(new Date(releaseDate.getTime()),-2)));
 		$("#releaseDateA").html("<br>" + convertDate(releaseDate));
 		$("#releaseDateB").html("<br>" + convertDate(releaseDate));
 		$("#releaseDate").html("RELEASE " + convertDate(releaseDate) + "<br><font size='5rem'>" + app + "</font>");
